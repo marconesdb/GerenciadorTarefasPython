@@ -1,0 +1,37 @@
+<!-- app/templates/edit_task.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarefa</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Tarefa</h1>
+    </div>
+    
+    <form action="{{ url_for('update_task', task_id=task_id) }}" method="post">
+        <label for="description">Nova Descrição:</label>
+        <input type="text" name="description" value="{{ task['description'] }}" required>
+        
+        <label for="due_date">Nova Data de Vencimento:</label>
+        <input type="date" name="due_date" value="{{ task['due_date'] }}" required>
+        
+        <label for="priority">Nova Prioridade:</label>
+        <select name="priority" required>
+            <option value="1" {% if task['priority'] == 'Crítica' %}selected{% endif %}>Crítica</option>
+            <option value="2" {% if task['priority'] == 'Urgente' %}selected{% endif %}>Urgente</option>
+            <option value="3" {% if task['priority'] == 'Média' %}selected{% endif %}>Média</option>
+            <option value="4" {% if task['priority'] == 'Importante' %}selected{% endif %}>Importante</option>
+            <option value="5" {% if task['priority'] == 'Baixa' %}selected{% endif %}>Baixa</option>
+        </select>
+          <!-- Novo campo para a nota --> 
+
+        <label for="note" id="note-label" class="note-label">Observação:</label><textarea name="note" id="note-textarea" class="note-textarea"   rows="4" cols="50">{{ task['note'] }}</textarea>
+
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

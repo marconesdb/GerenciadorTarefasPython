@@ -1,0 +1,217 @@
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+     
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    color: #007BFF;
+    border-radius: 5px;
+    height: 50px;
+    padding: 5px;
+    
+}
+
+
+.container {
+    text-align: center;
+    
+}
+
+.container h1 {
+    margin: 0; /* Remover margens padrão do h1 */
+    background-color: yellow;
+}
+
+form {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #6e6c6c;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: #6e6c6c;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: "Arial", sans-serif;
+    overflow: hidden; /* Adicionado para conter os elementos filhos (floats) */
+}
+
+a, button {
+    text-decoration: none;
+    color: #007BFF;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+    background-color: #0056b3;
+}
+.edit-button, .delete-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px; /* Adicionado espaçamento entre os botões */
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#delete-button:hover{
+   background-color: rgb(204, 25, 25);
+}
+
+.task-info {
+    float: left;
+    width: 70%; /* Ajuste conforme necessário */
+}
+
+.task-buttons {
+    float: right;
+    width: 30%; /* Ajuste conforme necessário */
+    text-align: right;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a prioridade aparecer com a cor amarela */
+li .priority {
+    color: #121212; /* Amarelo */
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+#complete-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px; /* Adicionado espaçamento entre os botões */
+}
+
+#complete-button:hover{
+    background-color: rgb(84, 173, 84);
+}
+
+#status-concluida {
+    background-color: orangered;
+}
+
+#status-pendente{
+    background-color: aqua;
+}
+
+
+/* styles.css */
+
+/* Adicione estilos conforme necessário */
+#note {
+    width: calc(100% - 16px); /* Defina a largura conforme necessário, considerando o padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: white; /* Adicione o background color branco */
+    border: 1px solid #ccc; /* Adicione uma borda para destacar o campo */
+    border-radius: 4px; /* Adicione bordas arredondadas */
+}
+
+/* styles.css */
+
+#note-label {
+    font-weight: bold;
+    color: #333;
+}
+
+#note-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* Adicione este bloco ao seu arquivo CSS para estilizar o campo de observação */
+
+textarea {
+    margin: 0;
+    padding: 8px; /* Ajuste conforme necessário */
+    width: 100%; /* Garante que o textarea ocupa toda a largura disponível */
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff; /* Cor de fundo desejada para o campo de observação */
+}
+
+
+/* Adicionando Media Queries para Responsividade */
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    li {
+        font-size: 14px;
+    }
+
+    .delete-button, .edit-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767px) {
+    .note-section {
+       margin: 10;
+    }
+}                          
